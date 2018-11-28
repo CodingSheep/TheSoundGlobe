@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c75c03f3066c4647ba37409214becaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioProfile: 10
+  audioProfile: 5
 --- !u!82 &1056034282
 AudioSource:
   m_ObjectHideFlags: 0
@@ -955,7 +955,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 448618d1809714b648e949a47712b263, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dcb33cc60c1fa48e1b819d81d5b5ab44, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1620122340}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9ef703421a0441e6beb068a359a5c15, type: 3}
   m_Name: 
@@ -1483,6 +1483,20 @@ MonoBehaviour:
   red: 0.4
   green: 0.4
   blue: 1
+--- !u!114 &1620122342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1620122340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44771fada90f14190a04f44cbeec1b64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  band: 0
+  startScale: 20
+  maxScale: 25
 --- !u!1001 &1771458495
 Prefab:
   m_ObjectHideFlags: 0

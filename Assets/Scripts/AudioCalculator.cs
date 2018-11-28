@@ -36,12 +36,26 @@ public class AudioCalculator : MonoBehaviour {
         GetAmplitude();
     }
 
+    //Set Minimum Frequency Band Value to avoid thousands of values << 1 from
+    //  constantly changing the highest value at the beginning of a song.
     void AudioProfile(float audioProfile) {
         for (int i = 0; i < 8; i++) {
             freqBandHighest[i] = audioProfile;
         }
     }
 
+    //Create our audio bands based on frequency of audio waves
+    void CreateAudioBands() {
+        for (int i = 0; i < 8; i++) {
+            if (freqBands[i] > freqBandHighest[i]) {
+                freqBandHighest[i] = freqBands[i];
+            }
+            audioBand[i] = (freqBands[i] / freqBandHighest[i]);
+            audioBandBuffer[i] = (bandBuffer[i] / freqBandHighest[i]);
+        }
+    }
+
+    //Calculate the current amplitude of a song based on our audio bands
     void GetAmplitude() {
         float currentAmplitude = 0;
         float currentAmplitudeBuffer = 0;
@@ -56,16 +70,6 @@ public class AudioCalculator : MonoBehaviour {
         }
         amplitude = currentAmplitude / amplitudeHighest;
         amplitudeBuffer = currentAmplitudeBuffer / amplitudeHighest;
-    }
-
-    void CreateAudioBands() {
-        for (int i = 0; i < 8; i++) {
-            if (freqBands[i] > freqBandHighest[i]) {
-                freqBandHighest[i] = freqBands[i];
-            }
-            audioBand[i] = (freqBands[i] / freqBandHighest[i]);
-            audioBandBuffer[i] = (bandBuffer[i] / freqBandHighest[i]);
-        }
     }
 
     void GetSpectrumAudioSource() {
