@@ -20,11 +20,12 @@ public class AudioCalculator : MonoBehaviour {
     float amplitudeHighest;
 
     public float audioProfile;
-
+    public static float Volume;
     // Use this for initialization
     void Start() {
         audioSource = GetComponent<AudioSource>();
         AudioProfile(audioProfile);
+        Volume = 0;
     }
 
     // Update is called once per frame
