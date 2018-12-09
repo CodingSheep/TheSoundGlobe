@@ -36,7 +36,12 @@ public class MixerLevels : MonoBehaviour
                 if (currentSelected.name == "Volume")
                 {
                     Debug.Log(currentSelected.name);
-                    pitch = ValueEditor("Pitch", pitch /*AudioCalculator.Volume*/, 0.1f, currentSelected);
+                    AudioCalculator.Volume = ValueEditor("MasterVolume", AudioCalculator.Volume, 0.5f, currentSelected);
+                }
+                if (currentSelected.name == "Pitch")
+                {
+                    Debug.Log(currentSelected.name);
+                    pitch = ValueEditor("Pitch", pitch, 0.01f, currentSelected);
                 }
                 if (currentSelected.name == "Lowpass")
                 {
@@ -60,12 +65,12 @@ public class MixerLevels : MonoBehaviour
     {
         if (Input.GetKey("q"))
         {
-            currentSelected.transform.Rotate(0, 1, 0);
+            currentSelected.transform.Rotate(0, -1, 0);
             ValueChanged = ValueChanged - Increment;
         }
         if (Input.GetKey("e"))
         {
-            currentSelected.transform.Rotate(0, -1, 0);
+            currentSelected.transform.Rotate(0, 1, 0);
             ValueChanged = ValueChanged + Increment;
         }
         

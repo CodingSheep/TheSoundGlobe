@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731316, g: 0.38074896, b: 0.3587254, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -3902,7 +3902,7 @@ GameObject:
   - component: {fileID: 815276011}
   - component: {fileID: 815276010}
   m_Layer: 0
-  m_Name: Dial 3
+  m_Name: Lowpass
   m_TagString: Dial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4054,7 +4054,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1072584932}
   m_LocalRotation: {x: -0.17670354, y: 0.33944437, z: -0.42660013, w: 0.8194912}
-  m_LocalPosition: {x: -7.96, y: 8.05, z: -8.04}
+  m_LocalPosition: {x: -7.95, y: 8.05, z: -8.03}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4184,7 +4184,7 @@ GameObject:
   - component: {fileID: 1134722016}
   - component: {fileID: 1134722015}
   m_Layer: 0
-  m_Name: Dial 2
+  m_Name: Pitch
   m_TagString: Dial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
