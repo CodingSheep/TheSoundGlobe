@@ -30,6 +30,8 @@ public class AudioCalculator : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        //Volume
+        audioSource.volume = (Volume+80)/120;
         GetSpectrumAudioSource();
         MakeFrequencyBands();
         BandBuffer();

@@ -11673,7 +11673,7 @@ GameObject:
   - component: {fileID: 1639122991}
   - component: {fileID: 1639122990}
   m_Layer: 0
-  m_Name: Dial 4
+  m_Name: HiPass
   m_TagString: Dial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15389,7 +15389,7 @@ GameObject:
   - component: {fileID: 2102510369}
   - component: {fileID: 2102510368}
   m_Layer: 0
-  m_Name: Reset Button
+  m_Name: Reset
   m_TagString: Dial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -24,7 +24,7 @@ AudioMixerController:
   - guid: 3fe1c03941c079c4d9125bbcaf2cd215
     name: Echo
   - guid: 9594a46bf647d7444b5c6907c2d21391
-    name: MyExposedParam
+    name: HighpassFreq
   - guid: e84a27201fbb0a641b9bd4f9dfa250d2
     name: LowpassFreq
   - guid: 32e950a247c184b4796acab350c9833f
@@ -108,7 +108,7 @@ AudioMixerSnapshotController:
     ba2f68e43afa52949bd3462b96d79dd7: -5493
     08938d85dd51dfa468b2074682a28017: 10.4
     7c6b05b520f6c0244815c51a90d1546d: 1
-    0fbf71c59c2930c4ea67acb9bea11909: 1
+    0fbf71c59c2930c4ea67acb9bea11909: 0.01
     1ccef2d5e579ef14588b01768c8423c9: 0.2
     214316062ef535c4d9fe29d26622f38a: 5
     52ad1ac627721414f851770ca077fbcd: 10

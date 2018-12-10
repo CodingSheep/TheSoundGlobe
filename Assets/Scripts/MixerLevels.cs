@@ -11,11 +11,13 @@ public class MixerLevels : MonoBehaviour
     public GameObject currentSelected;
     float pitch = 1f;
     float Lowpass = 22000;
+    float Highpass = 10;
     // Use this for initialization
     void Start()
     {
         MasterMixer.SetFloat("MasterVolume", AudioCalculator.Volume);
         MasterMixer.SetFloat("LowpassFreq", Lowpass);
+        MasterMixer.SetFloat("HighpassFreq", Lowpass);
         MasterMixer.SetFloat("Pitch", pitch);
     }
 
@@ -37,16 +39,57 @@ public class MixerLevels : MonoBehaviour
                 {
                     Debug.Log(currentSelected.name);
                     AudioCalculator.Volume = ValueEditor("MasterVolume", AudioCalculator.Volume, 0.5f, currentSelected);
+                    if (AudioCalculator.Volume > 40)
+                    {
+                        AudioCalculator.Volume = 40;
+                    }
+                    if (AudioCalculator.Volume < -80)
+                    {
+                        AudioCalculator.Volume = -80;
+                    }
                 }
                 if (currentSelected.name == "Pitch")
                 {
                     Debug.Log(currentSelected.name);
                     pitch = ValueEditor("Pitch", pitch, 0.01f, currentSelected);
+                    if (pitch > 5)
+                    {
+                        pitch = 5;
+                    }
+                    if (pitch < 1)
+                    {
+                        pitch = 1;
+                    }
                 }
                 if (currentSelected.name == "Lowpass")
                 {
                     Debug.Log(currentSelected.name);
                     Lowpass = ValueEditor("LowpassFreq", Lowpass, 100, currentSelected);
+                    if (Lowpass > 22000)
+                    {
+                        Lowpass = 22000;
+                    }
+                    if (Lowpass < 10)
+                    {
+                        Lowpass = 10;
+                    }
+                }
+                if (currentSelected.name == "Highpass")
+                {
+                    Debug.Log(currentSelected.name);
+                    Lowpass = ValueEditor("HighpassFreq", Highpass, 100, currentSelected);
+                    if (Highpass > 22000)
+                    {
+                        Highpass = 22000;
+                    }
+                    if (Highpass < 10)
+                    {
+                        Highpass = 10;
+                    }
+                }
+                if (currentSelected.name == "Reset")
+                {
+
                 }
             }
             else
