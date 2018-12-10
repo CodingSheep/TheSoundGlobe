@@ -19,7 +19,13 @@ public class ScaleSphereOnFreq : MonoBehaviour
     void Update()
     {
         transform.localScale = new Vector3((AudioCalculator.audioBandBuffer[band] * maxScale) + startScale, (AudioCalculator.audioBandBuffer[band] * maxScale) + startScale, (AudioCalculator.audioBandBuffer[band] * maxScale) + startScale);
-        Color color = new Color(AudioCalculator.audioBandBuffer[band], AudioCalculator.audioBandBuffer[band], AudioCalculator.audioBandBuffer[band]);
+
+        Color color;
+
+        if (band == 1)
+            color = new Color(AudioCalculator.audioBandBuffer[band] / 2, AudioCalculator.audioBandBuffer[band] / 2, AudioCalculator.audioBandBuffer[band] / 2);
+        else
+            color = new Color(AudioCalculator.audioBandBuffer[band], AudioCalculator.audioBandBuffer[band], AudioCalculator.audioBandBuffer[band]);
         material.SetColor("_EmissionColor", color);
     }
 }
